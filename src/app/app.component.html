@@ -1,0 +1,8 @@
+<h1>Hola</h1>
+<ul>
+    <app-alumne *ngFor="let current of titles; let i=index" 
+                        [nom]="current" [index]="i" 
+                        (deleteItemEvent)="this.titles.splice($event, 1)">
+    </app-alumne>
+</ul>
+<button (click)="eraseLast()">Borrar</button>

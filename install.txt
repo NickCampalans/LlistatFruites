@@ -1,0 +1,11 @@
+npm uninstall -g @angular/cli
+npm install -g @angular/cli
+
+
+ng new nom_projecte    // Crea una carpeta anomenada nom_projecte
+cd nom_projecte
+npm install
+
+ng serve
+
+
