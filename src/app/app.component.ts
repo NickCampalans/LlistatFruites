@@ -1,22 +1,27 @@
 import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { RouterOutlet } from '@angular/router';
-import { AlumneComponent } from './alumne/alumne.component';
+import { LlistatAlumnesComponent } from './llistat-alumnes/llistat-alumnes.component';
+import { DetallAlumneComponent } from './detall-alumne/detall-alumne.component';
 
 @Component({
   selector: 'app-root',
-  imports: [CommonModule, AlumneComponent],
+  imports: [CommonModule, LlistatAlumnesComponent, DetallAlumneComponent],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css'
 })
 export class AppComponent {
-  titles:string[] = ['Pau', 'Marc', 'Marc', 'Dídac', 'Ismael', 'Nico'];
+  titles:string[] = ['Pau', 'Marc', 'Marc', 'Dídac', 'Ismael', 'Nico', 'Marc'];
 
-  eraseLast() : void {
-    this.titles.pop();
+  current: string = "";
+
+  constructor() {
+    this.current = this.titles[0];
   }
 
-  deleteItem(position: number) {
-    this.titles.splice(position, 1);
+  select(position: number) {
+    this.current = this.titles[position];
   }
+
+
 }

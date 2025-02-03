@@ -11,8 +11,13 @@ export class AlumneComponent {
   @Input() index: number = -1;
 
   @Output() deleteItemEvent =  new EventEmitter<number>();
+  @Output() selectItemEvent =  new EventEmitter<number>();
 
   deleteItem() {
     this.deleteItemEvent.emit(this.index);
+  }
+
+  selectItem() {
+    this.selectItemEvent.emit(this.index);
   }
 }
