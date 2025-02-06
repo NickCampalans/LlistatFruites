@@ -1,1 +1,11 @@
-<p>{{ nom }} - {{ index }} <button (click)="deleteItem()">Borrar</button><button (click)="selectItem()">Seleccionar</button></p>
+<li [ngClass]="{fosc: index%2 == 1}">
+    <p>
+        {{ elementActual.nom }}
+        <button (click)="deleteItem()">
+            Borrar
+        </button>
+        <button (click)="selectItem()">
+            Seleccionar
+        </button>
+    </p>
+</li>

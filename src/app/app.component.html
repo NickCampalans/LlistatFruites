@@ -1,7 +1,10 @@
 <h1>Hola</h1>
-<app-llistat-alumnes    [titles]="titles" 
-                        (deleteItemEventList)="this.titles.splice($event, 1)"
-                        (selectItemEventList)="select($event)">
+<app-llistat-alumnes    
+    [titles]="titles" 
+    (deleteItemEventList)="delete($event)"
+    (selectItemEventList)="select($event)">
 </app-llistat-alumnes>
 
-<app-detall-alumne [element]="current"></app-detall-alumne>
+<app-detall-alumne 
+    [element]="current">
+</app-detall-alumne>

@@ -1,6 +1,6 @@
 <ul>
     <app-alumne *ngFor="let current of titles; let i=index" 
-                        [nom]="current" [index]="i" 
+                        [elementActual]="current" [index]="i" 
                         (deleteItemEvent)="borrar($event)"
                         (selectItemEvent)="seleccionar($event)">
     </app-alumne>

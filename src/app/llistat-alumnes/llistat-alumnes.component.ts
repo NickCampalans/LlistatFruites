@@ -1,6 +1,7 @@
 import { Component, Input, Output, EventEmitter } from '@angular/core';
 import { AlumneComponent } from '../alumne/alumne.component';
 import { CommonModule } from '@angular/common';
+import { Alumne } from '../classes/alumne';
 
 @Component({
   selector: 'app-llistat-alumnes',
@@ -9,7 +10,7 @@ import { CommonModule } from '@angular/common';
   styleUrl: './llistat-alumnes.component.css'
 })
 export class LlistatAlumnesComponent {
-  @Input() titles: string[] = [];
+  @Input() titles: Alumne[] = [];
   @Output() deleteItemEventList =  new EventEmitter<number>();
   @Output() selectItemEventList =  new EventEmitter<number>();
 
